@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tours</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item-sliding #slidingItem *ngFor="let t of tour; let ind = index">
+    <ion-item>
+        <ion-label>
+            {{ t }}
+        </ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+        <ion-item-option color="dark" (click)="view(ind)">
+          Book Tour
+      </ion-item-option>
+    </ion-item-options>
+</ion-item-sliding>
+</ion-list>
+</ion-content>
