@@ -149,9 +149,5 @@ export class Tab1Page implements OnInit {
     this.autocompleteItems = []
     this.autocomplete.input = ''
   }
-
-  GoTo(){
-    return window.location.href = 'https://www.google.com/maps/search/?api=1&query=Google&query_place_id='+this.placeid;
-  }
   
 }
