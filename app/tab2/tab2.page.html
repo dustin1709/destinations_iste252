@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Your saved places
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+  <ion-list-header>
+    <ion-label>Cities you saved</ion-label>
+  </ion-list-header>
+  <ion-item-sliding *ngFor="let item of Items">
+    <ion-item>
+      <ion-label>{{ item }}</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option color="warning" (click)="view_tours(item)">View Tour</ion-item-option>
+      <ion-item-option color="danger" (click)="delete(item)">Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+</ion-content>
